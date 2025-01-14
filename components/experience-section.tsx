@@ -1,3 +1,4 @@
+'use client'
 import { experiences } from "@/data/bio";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";

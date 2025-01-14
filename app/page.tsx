@@ -2,17 +2,19 @@
 
 import { useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
-import Contact from '@/components/contact-form'
-import SkillsSection from '@/components/skills-section'
-import {Experience} from '@/components/experience-section'
-import {Education} from '@/components/education-section'
-import {Projects} from '@/components/projects-section'
 import Typewriter from "typewriter-effect";
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Github, Linkedin, Instagram } from 'lucide-react'
 import { Bio } from '@/data/bio'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+
+const Contact = dynamic(() => import('@/components/contact-form'), { ssr: false })
+const SkillsSection = dynamic(() => import('@/components/skills-section'), { ssr: false })
+const Experience = dynamic(() => import('@/components/experience-section').then(mod => mod.Experience), { ssr: false })
+const Education = dynamic(() => import('@/components/education-section').then(mod => mod.Education), { ssr: false })
+const Projects = dynamic(() => import('@/components/projects-section').then(mod => mod.Projects), { ssr: false })
 
 export default function Page() {
   const controls = useAnimation()
