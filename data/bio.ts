@@ -207,6 +207,25 @@ export const projects = [
       category: "Web App",
       github: "https://github.com/rijulsoni/newsnodejs",
       webapp: "https://newsnodejs.onrender.com/"
+    },
+    {
+      id: 3,
+      title: "Blog App",
+      date: "April 2025 - Present",
+      description:
+        "This is a dynamic blog application built with Next.js. The app provides a seamless experience for posting, managing blog content, and creating rich-text formatted posts using a rich text editor. It leverages Next.js features such as server-side rendering, static site generation, and dynamic routing to ensure optimized performance and SEO friendliness. The project aims to provide a fast and interactive user interface for blog users.",
+      image: "/blogapp.png",
+      tags: [
+        "Next.js",
+        "React",
+        "JavaScript",
+        "CSS",
+        "Web App",
+        "Rich Text Editor"
+      ],
+      category: "Web App",
+      github: "https://github.com/rijulsoni/blog-app",
+      webapp: "https://blogbyrijul.vercel.app/"
     }
   ];
 
