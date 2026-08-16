@@ -99,7 +99,7 @@ export default function RootLayout({
         className={cn(
           geistSans.variable,
           jetbrainsMono.variable,
-          'font-sans antialiased'
+          'font-sans antialiased overflow-x-hidden'
         )}
       >
         <ThemeProvider>

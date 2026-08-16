@@ -53,13 +53,13 @@ const SkillsSection = () => {
                 whileHover={{ y: -4 }}
                 className="code-card p-0 h-full overflow-hidden"
               >
-                <div className="px-4 py-3 border-b border-border bg-gradient-to-r from-primary/10 via-secondary/40 to-secondary/40 font-mono text-sm tracking-widest flex items-center justify-between">
-                  <span className="flex items-center gap-2">
+                <div className="px-4 py-3 border-b border-border bg-gradient-to-r from-primary/10 via-secondary/40 to-secondary/40 font-mono text-sm tracking-widest flex items-center justify-between gap-3">
+                  <span className="flex items-center gap-2 flex-shrink-0">
                     <span className="w-2 h-2 rounded-full bg-primary glow-dot" />
                     <span className="text-primary font-bold">LAYER</span>
                   </span>
-                  <span className="text-foreground">{tableName(category.title)}</span>
-                  <span className="text-muted-foreground">{category.skills.length} rows</span>
+                  <span className="text-foreground truncate min-w-0">{tableName(category.title)}</span>
+                  <span className="text-muted-foreground flex-shrink-0">{category.skills.length} rows</span>
                 </div>
                 <div className="p-4">
                   {category.skills.map((skill, rowIndex) => (

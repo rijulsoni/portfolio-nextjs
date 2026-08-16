@@ -136,7 +136,7 @@ export function Projects() {
               transition={{ duration: 0.5, delay: index * 0.08 }}
               className="code-card p-6 sm:p-8"
             >
-              <div className="flex items-center gap-2 mb-5 font-mono text-sm tracking-widest text-muted-foreground">
+              <div className="flex flex-wrap items-center gap-2 mb-5 font-mono text-sm tracking-widest text-muted-foreground">
                 <span className="text-primary">$</span> cat /work/{cs.slug}
                 <span className="ml-auto text-primary">● shipped</span>
               </div>

@@ -17,12 +17,12 @@ const Contact = () => {
 
         <div className="max-w-2xl mx-auto">
           <div className="code-card p-6 md:p-8 overflow-hidden">
-            <div className="flex items-center gap-3 mb-6 font-mono text-sm">
+            <div className="flex flex-wrap items-center gap-3 mb-6 font-mono text-sm">
               <span className="px-2 py-0.5 rounded text-sm font-bold bg-primary/15 text-primary">
                 POST
               </span>
               <span className="text-foreground">/api/v1/contact</span>
-              <span className="ml-auto text-muted-foreground text-sm tracking-widest">Content-Type: application/json</span>
+              <span className="ml-auto hidden sm:inline text-muted-foreground text-sm tracking-widest">Content-Type: application/json</span>
             </div>
 
             <form

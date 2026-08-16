@@ -29,11 +29,11 @@ export default function IdentityCard() {
           </span>
           IDENTITY_CARD
         </span>
-        <span className="text-primary">uid=1000(rijul)</span>
+        <span className="text-primary hidden sm:inline">uid=1000(rijul)</span>
       </div>
 
-      <div className="p-5 flex items-center gap-5">
-        <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden flex-shrink-0 border border-border p-1 bg-gradient-to-br from-primary/40 via-transparent to-accent/40">
+      <div className="p-5 flex items-center gap-4 sm:gap-5">
+        <div className="relative w-20 h-20 sm:w-32 sm:h-32 rounded-xl overflow-hidden flex-shrink-0 border border-border p-1 bg-gradient-to-br from-primary/40 via-transparent to-accent/40">
           <div className="relative w-full h-full rounded-lg overflow-hidden">
             <Image
               src={Bio.profile}

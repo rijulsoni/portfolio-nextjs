@@ -37,7 +37,7 @@ export function Experience() {
                 className="group"
               >
                 <div className="code-card p-0 overflow-hidden">
-                  <div className="flex items-center gap-3 px-4 py-3 border-b border-border bg-secondary/40 font-mono text-sm">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 px-4 py-3 border-b border-border bg-secondary/40 font-mono text-sm">
                     <span className={`px-2 py-0.5 rounded text-sm font-bold ${
                       method(index) === 'GET'
                         ? 'bg-emerald-500/15 text-emerald-500'
@@ -45,7 +45,7 @@ export function Experience() {
                     }`}>
                       {method(index)}
                     </span>
-                    <span className="text-foreground">/v1/experience/{exp.id}</span>
+                    <span className="text-foreground truncate">/v1/experience/{exp.id}</span>
                     <span className="ml-auto text-muted-foreground text-sm tracking-widest">
                       {exp.date}
                     </span>
