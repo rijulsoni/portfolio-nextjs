@@ -1,25 +1,85 @@
 import type { Metadata } from 'next'
-import { Geist, Azeret_Mono as Geist_Mono } from 'next/font/google'
+import { Geist, JetBrains_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { Toaster } from '@/components/ui/toaster'
 import { cn } from '@/lib/utils'
-import '@/styles/globals.css'
+import '@/app/globals.css'
 
 const geistSans = Geist({
   subsets: ['latin'],
   variable: '--font-sans',
 })
 
-const geistMono = Geist_Mono({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
 })
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Rijul Soni',
+  jobTitle: 'Software Engineer',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Jungleworks',
+  },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'ABV Government Institute of Engineering & Technology, Shimla',
+  },
+  url: 'https://rijul.dev',
+  sameAs: [
+    'https://github.com/rijulsoni',
+    'https://www.linkedin.com/in/rijulsoni31/',
+    'https://www.instagram.com/rijulsonii/',
+  ],
+  knowsAbout: [
+    'Node.js',
+    'MySQL',
+    'Next.js',
+    'Ruby on Rails',
+    'Payment integrations',
+    'Worldpay Access',
+    'Tokenized recurring payments',
+    'Quick-commerce platforms',
+  ],
+}
+
 export const metadata: Metadata = {
-  title: 'Rijul Soni - Software Engineer',
-  description: 'Portfolio of Rijul Soni, a passionate software engineer specializing in web development.',
+  metadataBase: new URL('https://rijul.dev'),
+  title: 'Rijul Soni — Software Engineer (Node.js · MySQL · Payments)',
+  description:
+    'Backend engineer building quick-commerce and delivery systems. Cut delivery-assignment latency 35% on Yelo, wired tokenized card payments across two processors, shipped enterprise SaaS on Rails + React.',
+  keywords: [
+    'Rijul Soni',
+    'software engineer',
+    'Node.js',
+    'MySQL',
+    'Flutter',
+    'Next.js',
+    'payment integrations',
+    'quick-commerce',
+  ],
+  openGraph: {
+    title: 'Rijul Soni — Software Engineer',
+    description: 'Backend engineer: quick-commerce, tokenized payments, Node.js + MySQL.',
+    type: 'website',
+    url: 'https://rijul.dev',
+    siteName: 'rijul.dev',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Rijul Soni — Software Engineer',
+    description: 'Backend engineer: quick-commerce, tokenized payments, Node.js + MySQL.',
+  },
+  robots: { index: true, follow: true },
+  icons: {
+    icon: '/profile.jpg',
+    apple: '/profile.jpg',
+  },
 }
 
 export default function RootLayout({
@@ -30,13 +90,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
-
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body
         className={cn(
           geistSans.variable,
-          geistMono.variable,
+          jetbrainsMono.variable,
           'font-sans antialiased'
         )}
       >
@@ -52,4 +114,3 @@ export default function RootLayout({
     </html>
   )
 }
-

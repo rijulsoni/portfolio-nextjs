@@ -1,36 +1,57 @@
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { education } from '@/data/bio';
+'use client'
+
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { education } from '@/data/bio'
+import { SectionHeader } from './section-header'
 
 export function Education() {
   return (
-    <section className="py-16 bg-white dark:bg-gray-900">
+    <section className="py-20 md:py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Education</h2>
-        <div className="space-y-8 dark:bg-gray-900">
+        <SectionHeader
+          index="03"
+          title="Education"
+          comment="SELECT degree, grade FROM education ORDER BY id ASC;"
+        />
+
+        <div className="max-w-3xl mx-auto space-y-6">
           {education.map((edu, index) => (
             <motion.div
               key={edu.id}
-              className=" p-6 dark:bg-gray-800 border border-primary/20 dark:border-primary/10 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              whileHover={{ x: 6 }}
+              className="group"
             >
-              <div className="flex items-center mb-4">
-              <Image src={edu.img} alt={edu.school} width={64} height={64} className="rounded-full mr-4" />
-                <div>
-                  <h3 className="text-xl text-primary font-semibold">{edu.school}</h3>
-                  <p className="dark:text-gray-400 text-gray-600">{edu.date}</p>
+              <div className="code-card p-0 overflow-hidden">
+                <div className="px-4 py-3 border-b border-border bg-secondary/40 font-mono text-sm text-muted-foreground flex items-center gap-2">
+                  <span className="text-primary">$</span>
+                  SELECT * FROM education WHERE id = {edu.id};
+                </div>
+                <div className="p-5 sm:p-6 flex items-start gap-4">
+                  <div className="relative w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 border border-border bg-white dark:bg-secondary">
+                    <Image src={edu.img} alt={edu.school} fill className="object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold group-hover:text-primary transition-colors">
+                      {edu.school}
+                    </h3>
+                    <p className="text-primary text-sm font-mono">{edu.degree}</p>
+                    <p className="text-sm text-muted-foreground mt-1.5 font-mono text-sm">
+                      <span className="text-primary">grade</span>: {edu.grade}
+                      <span className="mx-2 text-border">|</span>
+                      <span className="text-primary">period</span>: {edu.date}
+                    </p>
+                  </div>
                 </div>
               </div>
-              <h4 className="text-lg font-medium mb-2">{edu.degree}</h4>
-              <p className="dark:text-gray-400 text-gray-700 mb-2">Grade: {edu.grade}</p>
-              <p className="dark:text-gray-300 text-gray-600">{edu.desc}</p>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
-

@@ -1,0 +1,29 @@
+# Rijul Soni — Software Engineer
+
+Rijul Soni is a backend-focused software engineer working on quick-commerce, delivery, and marketplace platforms. He writes Node.js + MySQL backend code, builds Next.js/React frontends, and integrates payment gateways (tokenized cards, recurring charges).
+
+## Contact
+- Email: rijulsoni31@gmail.com
+- GitHub: https://github.com/rijulsoni
+- LinkedIn: https://www.linkedin.com/in/rijulsoni31/
+- Resume: https://drive.google.com/file/d/1iRY9rpegQ8KkN3NMdu_3u4OzA0YOwKmE/view?usp=drive_link
+
+## Currently
+Software Engineer at Jungleworks (since June 2025), Mohali, Punjab. Engineering core modules for Yelo, a SaaS multi-vendor marketplace powering e-commerce, food, and hyperlocal delivery.
+
+## Key facts
+- Cut delivery-assignment latency by 35% via Node.js API improvements and MySQL query optimization.
+- Implemented geofencing, location-based filtering, and real-time inventory synchronization for hyperlocal serviceability.
+- Integrated multiple payment gateways (Razorpay, Stripe, Worldpay Access) and Tookan for automated delivery tracking.
+- Tokenized card payments with recurring (MIT/CIT) flows — Worldpay schemeTransactionReference reuse for continued MIT billing; PCI-safe handling.
+- Previously: Associate Software Engineer at Watermark Insights (Ruby on Rails, PostgreSQL, MongoDB, React, Redux, Docker, RSpec, Jest).
+
+## Stack
+- Frontend: Next.js, React, Redux, TypeScript
+- Backend: Node.js, Express.js, Ruby on Rails, REST APIs, JWT
+- Data: MySQL, PostgreSQL, MongoDB, Redis, Elasticsearch
+- Payments: Razorpay, Stripe, Worldpay Access, Tookan, tokenized cards (MIT/CIT), webhooks
+- Infra: Docker, AWS, Linux, Git; Jest, RSpec
+
+## Education
+B.Tech, Computer Science and Engineering — ABV Government Institute of Engineering & Technology, Shimla (7.7 CGPA).
