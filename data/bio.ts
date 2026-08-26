@@ -1,6 +1,6 @@
 export const Bio = {
   name: "Rijul Soni",
-  profile: "/profile.jpg",
+  profile: "/profile.png",
   headline: "Software Engineer @ Jungleworks",
   roles: [
     "Full Stack Developer",
@@ -11,7 +11,7 @@ export const Bio = {
   description:
     "Backend engineer building quick-commerce and delivery systems. At Jungleworks I cut delivery-assignment latency 35% on Yelo, a multi-tenant marketplace serving 120+ merchants, and wired tokenized card payments across two processors. Before that I shipped enterprise SaaS features at Watermark Insights on Rails + React.",
   github: "https://github.com/rijulsoni",
-  email: "rijulsoni31@gmail.com",
+  email: "sonirijul1@gmail.com",
   resume:
     "https://drive.google.com/file/d/1iRY9rpegQ8KkN3NMdu_3u4OzA0YOwKmE/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/rijulsoni31/",
