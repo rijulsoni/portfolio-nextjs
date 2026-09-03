@@ -55,12 +55,18 @@ export function Experience() {
                   <div className="p-5 sm:p-6 font-mono text-sm space-y-3">
                     <div className="flex items-start gap-4">
                       <div className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 border border-border bg-white dark:bg-secondary">
-                        <Image
-                          src={exp.img}
-                          alt={`${exp.company} logo`}
-                          fill
-                          className="object-cover"
-                        />
+                        {exp.img ? (
+                          <Image
+                            src={exp.img}
+                            alt={`${exp.company} logo`}
+                            fill
+                            className="object-cover"
+                          />
+                        ) : (
+                          <span className="absolute inset-0 flex items-center justify-center font-mono text-lg font-bold text-primary">
+                            {exp.company.charAt(0)}
+                          </span>
+                        )}
                       </div>
                       <div>
                         <p className="text-muted-foreground text-sm">

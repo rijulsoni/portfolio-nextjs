@@ -73,7 +73,13 @@ const SkillsSection = () => {
                       </span>
                       <span className="w-8 h-8 rounded-lg border border-border bg-secondary/60 flex items-center justify-center flex-shrink-0 overflow-hidden">
                         {skill.image ? (
-                          <Image src={skill.image} alt={skill.name} width={18} height={18} className="object-contain" />
+                          <Image
+                            src={skill.image}
+                            alt={skill.name}
+                            width={18}
+                            height={18}
+                            className={`object-contain${skill.mono ? ' dark:invert' : ''}`}
+                          />
                         ) : (
                           fallbackIcon(skill.name)
                         )}

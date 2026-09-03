@@ -1,16 +1,14 @@
-const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**', // This allows any hostname with HTTPS.
-      },
-      {
-        protocol: 'http',
-        hostname: '**', // This allows any hostname with HTTP.
-      },
-    ],
-  },
-};
+import type { NextConfig } from 'next'
 
-export default nextConfig;
+const nextConfig: NextConfig = {
+  images: {
+    // Every image is now self-hosted from /public, so no remote hosts are needed.
+    // The icon set is SVG, and the optimizer rejects SVG unless this is enabled —
+    // safe here because we only ever serve our own files.
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+}
+
+export default nextConfig

@@ -73,7 +73,7 @@ export default function Header() {
             <Image src={Bio.profile} alt={Bio.name} fill className="object-cover" />
           </span>
           <span className="hidden sm:inline font-mono text-sm text-muted-foreground group-hover:text-primary transition-colors">
-            rijul.dev
+            rijul_soni
           </span>
         </Link>
 

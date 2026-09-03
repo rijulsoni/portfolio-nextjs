@@ -36,7 +36,7 @@ const runCommand = (input: string): Line[] => {
     case 'whoami':
       return [
         { text: `${Bio.name} — ${Bio.headline}`, color: 'foreground' },
-        { text: 'Backend engineer: Node.js · MySQL · payments · quick-commerce', color: 'muted' },
+        { text: 'Full-stack engineer: React · Next.js · Node.js · MySQL · payments', color: 'muted' },
       ]
     case 'skills':
       return skillsByLayer.map((s) => ({

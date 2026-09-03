@@ -5,7 +5,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { Toaster } from '@/components/ui/toaster'
 import { cn } from '@/lib/utils'
-import '@/app/globals.css'
+import './globals.css'
 
 const geistSans = Geist({
   subsets: ['latin'],
@@ -39,8 +39,11 @@ const jsonLd = {
   knowsAbout: [
     'Node.js',
     'MySQL',
+    'React',
+    'TypeScript',
     'Next.js',
     'Ruby on Rails',
+    'Elasticsearch',
     'Payment integrations',
     'Worldpay Access',
     'Tokenized recurring payments',
@@ -50,22 +53,24 @@ const jsonLd = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://rijul.dev'),
-  title: 'Rijul Soni — Software Engineer (Node.js · MySQL · Payments)',
+  title: 'Rijul Soni — Full-Stack Engineer (React · Node.js · MySQL)',
   description:
-    'Backend engineer building quick-commerce and delivery systems. Cut delivery-assignment latency 35% on Yelo, wired tokenized card payments across two processors, shipped enterprise SaaS on Rails + React.',
+    'Full-stack engineer building quick-commerce and delivery systems, front end to database. Cut delivery-assignment latency 35% on Yelo, built a centralized merchant catalogue, and shipped tokenized card payments across three processors.',
   keywords: [
     'Rijul Soni',
     'software engineer',
     'Node.js',
     'MySQL',
-    'Flutter',
+    'full stack developer',
+    'React',
+    'TypeScript',
     'Next.js',
     'payment integrations',
     'quick-commerce',
   ],
   openGraph: {
     title: 'Rijul Soni — Software Engineer',
-    description: 'Backend engineer: quick-commerce, tokenized payments, Node.js + MySQL.',
+    description: 'Full-stack engineer — quick-commerce, merchant catalogues, tokenized payments. React and Next.js on Node, Rails, and MySQL.',
     type: 'website',
     url: 'https://rijul.dev',
     siteName: 'rijul.dev',
@@ -73,7 +78,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary',
     title: 'Rijul Soni — Software Engineer',
-    description: 'Backend engineer: quick-commerce, tokenized payments, Node.js + MySQL.',
+    description: 'Full-stack engineer — quick-commerce, merchant catalogues, tokenized payments. React and Next.js on Node, Rails, and MySQL.',
   },
   robots: { index: true, follow: true },
   icons: {
