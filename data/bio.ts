@@ -59,9 +59,9 @@ export const Bio = {
     'Programmer',
   ],
   description:
-    "Backend engineer building quick-commerce and delivery systems. At Jungleworks I cut delivery-assignment latency 35% on Yelo, a multi-tenant marketplace serving 120+ merchants, and wired tokenized card payments across two processors. Before that I shipped enterprise SaaS features at Watermark Insights on Rails + React.",
-  github: "https://github.com/rijulsoni",
-  email: "sonirijul1@gmail.com",
+    'Full-stack engineer building quick-commerce and hyperlocal delivery systems \u2014 React and Next.js on top, Node, Rails, and MySQL underneath. On Yelo, a multi-tenant marketplace behind 120+ merchant storefronts, I cut delivery-assignment latency 35%, gave merchants one catalogue across every store, and put three payment processors behind a single tokenized interface.',
+  github: 'https://github.com/rijulsoni',
+  email: 'sonirijul1@gmail.com',
   resume:
     'https://drive.google.com/file/d/1iRY9rpegQ8KkN3NMdu_3u4OzA0YOwKmE/view?usp=drive_link',
   linkedin: 'https://www.linkedin.com/in/rijulsoni31/',
